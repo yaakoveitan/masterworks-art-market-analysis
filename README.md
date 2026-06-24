@@ -290,10 +290,11 @@ SELECT
     ROUND(AVG(sale_price_usd)::numeric, 2)         AS avg_sale_price_usd
 FROM masterworks_sales
 GROUP BY artist
-ORDER BY total_revenue_usd DESC;
+ORDER BY total_revenue_usd DESC
+LIMIT 5;
 ```
  
-![Query 1 Results]()
+![Query 1 Results](https://github.com/user-attachments/assets/48318e92-a8e5-4a15-a5fa-392d9d076bdc)
  
 ---
  
@@ -310,10 +311,10 @@ SELECT
     sale_date
 FROM masterworks_sales
 ORDER BY moic DESC
-LIMIT 20;
+LIMIT 5;
 ```
  
-![Query 2 Results](screenshots/query_02_best_performing_sales.png)
+![Query 2 Results](https://github.com/user-attachments/assets/87c259f5-a5ff-4606-92b6-966fe340a548)
  
 ---
  
@@ -331,14 +332,14 @@ SELECT
 FROM masterworks_sales
 WHERE moic < 1
 ORDER BY moic ASC
-LIMIT 20;
+LIMIT 5;
 ```
  
-![Query 3 Results](screenshots/query_03_worst_performing_sales.png)
+![Query 3 Results](https://github.com/user-attachments/assets/b61b8918-43b9-4d6e-a241-da87399984bc)
  
 ---
  
-### 4. Which artists have delivered the best average returns?
+### 4. Which artists have delivered the best average returns? (Min. 5 sales)
  
 ```sql
 SELECT
@@ -350,10 +351,11 @@ SELECT
 FROM masterworks_sales
 GROUP BY artist
 HAVING COUNT(*) >= 3
-ORDER BY avg_moic DESC;
+ORDER BY avg_moic DESC
+LIMIT 5;
 ```
  
-![Query 4 Results](screenshots/query_04_avg_moic_by_artist.png)
+![Query 4 Results](https://github.com/user-attachments/assets/78d03bf9-70a9-4156-879d-3cd81a0a0c6f)
  
 ---
  
@@ -385,7 +387,7 @@ WHERE rank = 1
 ORDER BY sale_year;
 ```
  
-![Query 5 Results](screenshots/query_05_top_artist_by_year.png)
+![Query 5 Results](https://github.com/user-attachments/assets/7c0535b8-a2cf-45df-b6d0-646e17348abb)
  
 ---
  
@@ -417,6 +419,6 @@ WHERE rank = 1
 ORDER BY sale_year;
 ```
  
-![Query 6 Results](screenshots/query_06_most_expensive_by_year.png)
+![Query 6 Results](https://github.com/user-attachments/assets/e9e9f5ff-6807-49e7-911d-88e8c72bc0fb)
  
 ---
