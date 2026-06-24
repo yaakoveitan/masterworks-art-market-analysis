@@ -1,6 +1,6 @@
 # Masterworks Art Market Analysis
  
-A data pipeline and analysis project exploring the secondary art market through Masterworks' public sales data. This project covers data acquisition, cleaning, API scraping, database design, SQL analysis, and business intelligence dashboarding.
+A data pipeline and analysis project exploring the secondary art market through Masterworks' public sales data. This project covers data acquisition, cleaning, API scraping, SQL analysis, and business intelligence dashboarding.
  
 ---
  
